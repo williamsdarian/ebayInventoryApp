@@ -4,18 +4,25 @@ This application currently allows only for image uploads, it is configured to sa
 
 **To run this application, make sure you have node installed on your machine. **
 
-Download the repository
-Install npm: apt install npm
-Create a package json for the app: npm init 
+-Download the repository
+
+-Install npm: apt install npm
+
+-Create a package json for the app: npm init 
+
 **At the least, make sure you save the name from your program**
-Install the Express Package: npm install express
-Install multer: npm install multer
-Start up the server: node server.js
-View in browser at http://localhost:3000
 
-Once installed, open a terminal console on your machine and navigate to the directiry these files are stored in. 
+-Install the Express Package: npm install express
 
-Make sure you have server.js pointed to the correct file paths for your directory. 
+-Install multer: npm install multer
 
-run using command "node server.js"
+-Start up the server: node server.js
+
+-Once installed, open a terminal console on your machine and navigate to the directiry these files are stored in. 
+
+-Make sure you have server.js pointed to the correct file paths for your directory. 
+
+-run using command "node server.js"
+
+-View in browser at http://localhost:3000
 
