@@ -4,6 +4,11 @@ This application currently allows only for image uploads, it is configured to sa
 
 To run this application, make sure you have node installed on your machine. 
 
+Download the repository
+Install npm modules: npm install
+Start up the server: node server.js
+View in browser at http://localhost:8080
+
 Once installed, open a terminal console on your machine and navigate to the directiry these files are stored in. 
 
 Make sure you have server.js pointed to the correct file paths for your directory. 
