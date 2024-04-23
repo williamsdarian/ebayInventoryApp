@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>eBay Inventory Upload</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>Ebay Inventory Upload</h1>
+        <p>This page is for uploading new items to be listed on <a href="https://www.ebay.com">eBay</a>.</p>
+        <p></p>
+    </header>
+
+    <!-- Item upload Form -->
+
+    <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="post">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required>
+        <br><br>
+        <label for="itemDescription">Description:</label>
+        <textarea id="itemDescription" name="itemDescription"
+            placeholder="Brand, model(s) compatible with, quantity, etc..."></textarea>
+        <br><br>
+        <label for="cost">Market Value Estimate? :</label>
+        <input type="text" id="cost" name="cost" placeholder="$$$$$">
+        <br><br>
+        <label for="imgUpload">Image Upload(s):</label>
+        <input type="file" id="imgUpload" name="files" multiple="multiple">
+        <br><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Footer -->
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
