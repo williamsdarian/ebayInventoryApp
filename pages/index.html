@@ -20,20 +20,24 @@
 
     <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="post">
         <label for="itemName">Item Name:</label>
-        <input type="text" id="itemName" name="itemName" required>
+        <input type="text" id="itemName" name="itemName" maxlength="50" required>
         <br><br>
         <label for="itemDescription">Description:</label>
         <textarea id="itemDescription" name="itemDescription"
-            placeholder="Brand, model(s) compatible with, quantity, etc..."></textarea>
+                  placeholder="Brand, model(s) compatible with, quantity, etc..."
+                  maxlength="500"></textarea>
         <br><br>
-        <label for="cost">Market Value Estimate? :</label>
-        <input type="text" id="cost" name="cost" placeholder="$$$$$">
+        <label for="cost">Market Value Estimate?:</label>
+        <input type="text" id="cost" name="cost" maxlength="50" placeholder="$$$$$">
         <br><br>
         <label for="imgUpload">Image Upload(s):</label>
         <input type="file" id="imgUpload" name="files" multiple="multiple">
+        <input type="hidden" id="uploadID" name="uploadID" value="Date.Now()" />
         <br><br><br>
         <input type="submit" value="Submit">
     </form>
+    <br /> <br />
+    <input type="button" value="Previous Uploads" onclick="location.href = '/pastUploads';">
 
     <!-- Footer -->
     <!-- Scripts -->

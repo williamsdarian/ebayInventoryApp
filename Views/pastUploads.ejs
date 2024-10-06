@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Previous Uploads</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+    <header>
+    <h1>Past Uploads</h1>
+    </header>
+    
+    <table>
+        <thead>
+            <tr>
+                <td><b><ins>Name</ins></b></td>
+                <td><b><ins>Description</ins></b></td>
+                <td><b><ins>Price</ins></b></td>
+                <td><b><ins>Listed?</ins></b></td>
+                <td><b><ins>Sold?</ins></b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item => { %>
+            <tr>
+                <td><%= item.itemName %></td>
+                <td><%= item.itemDescription %></td>
+                <td>$<%= item.cost %></td>
+                <td><%= item.isListed %></td>
+                <td><%= item.hasSold %></td>
+                <td>
+                <!-- Loop through the imagePaths array and render each image -->
+                 <% if (item.imagePaths && item.imagePaths.length) { %>
+                 <% item.imagePaths.forEach((imagePath) => { %>
+                    <img src="<%= imagePath %>" style="max-width: 150px; max-height: 150px;" />
+                 <% }) %>
+                <% } else { %>
+                    No images
+                <% } %>
+                </td>
+                <td>
+                    <form action="/deleteUpload" method="POST">
+                        <input type="hidden" id="uploadID" name="uploadID" value="<%= item.id %>" />
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this entry: <%= item.itemName%>?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <br /> 
+    <input type="button" value="Upload Another Item" onclick="backToHome()" />
+
+</body>
+</html>
+
+<script src="/assets/js/main.js"></script>

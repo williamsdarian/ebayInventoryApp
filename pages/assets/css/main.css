@@ -1014,14 +1014,14 @@ button,
     input[type="button"],
     button,
     .button {
-        padding: 0;
+        /*padding: 0;*/
     }
 }
 
 /* Header */
 #header h1 {
     font-size: 3.25em;
-    margin: 10% 0 0.55em 0;
+    margin: 25% 0 0.55em 0;
 }
 
 #header p {
@@ -1036,6 +1036,7 @@ button,
 @media screen and (max-width: 736px) {
     #header h1 {
         font-size: 2em;
+        margin: 50% 0 0.5em 0;
     }
 
     #header p {
