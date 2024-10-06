@@ -250,5 +250,4 @@ app.listen(PORT, IP_ADDRESS, () => {
     console.log(`Server is running on http://${IP_ADDRESS}:${PORT}`);
     console.log(`Formatted Date: ${formattedDate}`);
     console.log(`Formatted Time: ${formattedTime}`);
-    console.log(currentDate.getTime());
 });
